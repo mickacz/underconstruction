@@ -23,19 +23,6 @@ Begin by installing this package through Composer (Laravel 5.8 and 6.0 compatibl
 composer require larsjanssen6/underconstruction
 ```
 
-Then the  ```service provider``` must be installed.
-
-> Laravel 5.5+ users: this step may be skipped, as we can auto-register the package with the framework.
-
-```php
-// config/app.php
-
-'providers' => [
-    // ...
-    'LarsJanssen\UnderConstruction\UnderConstructionServiceProvider'
-];
-```
-
 The ```\LarsJanssen\UnderConstruction\UnderConstruction::class``` middleware must be registered in the kernel:
 
 ```php
@@ -80,6 +67,19 @@ return [
      * Under construction title.
      */
     'title' => 'Under Construction',
+
+    /*
+     * Custom Route Prefix
+     * */
+    'route-prefix' => env('UNDER_CONSTRUCTION_ROUTE_PREFIX','under'),
+
+    /*
+     * Custom Endpoint if you don't want to use 'construction'
+     * e.g. if you change to 'checkpoint', the route prefix
+     * above will be appended giving you 'under/checkpoint'
+     * */
+    'custom-endpoint' => env('UNDER_CONSTRUCTION_CUSTOM_ENDPOINT','construction'),
+
 
     /*
      * Back button translation.

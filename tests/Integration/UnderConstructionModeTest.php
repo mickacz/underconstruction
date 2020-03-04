@@ -41,8 +41,8 @@ class UnderConstructionModeTest extends TestCase
         $this->unsuccessfulLogin()
             ->assertStatus(401)
             ->assertJson([
-               'too_many_attempts' => false,
-               'attempts_left' => 'Attempts left: 1',
+                'too_many_attempts' => false,
+                'attempts_left' => 'Attempts left: 1',
             ]);
 
         $this->unsuccessfulLogin()
@@ -98,6 +98,6 @@ class UnderConstructionModeTest extends TestCase
         $this->get('/test')
             ->assertSessionMissing('can_visit')
             ->assertRedirect()
-            ->assertHeader('location', '/under/construction');
+            ->assertHeader('location', 'under/construction');
     }
 }
