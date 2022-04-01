@@ -176,7 +176,7 @@
 
             back() {
                 if(this.position > 0) {
-                    Vue.set(this.code, this.position -1, "*");
+                    this.$set(this.code, this.position -1, "*");
                     this.position--;
                 }
             },
@@ -198,12 +198,12 @@
              * Set number at the correct array position.
              */
             setNumber(number) {
-                Vue.set(this.real_code, this.position, number);
+                this.$set(this.real_code, this.position, number);
 
                 if ( this.hide_code ) {
-                    Vue.set(this.code, this.position, '-' );
+                    this.$set(this.code, this.position, '-' );
                 } else {
-                    Vue.set(this.code, this.position, number);
+                    this.$set(this.code, this.position, number);
                 }
                 this.position++;
             },
@@ -256,9 +256,9 @@
 
                 for ( let i = 0; i < this.position; i++ ) {
                     if ( this.hide_code ) {
-                        Vue.set(this.code, i, '-' );
+                        this.$set(this.code, i, '-' );
                     } else {
-                        Vue.set(this.code, i, this.real_code[i]);
+                        this.$set(this.code, i, this.real_code[i]);
                     }
                 }
 

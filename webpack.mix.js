@@ -1,4 +1,4 @@
-const { mix } = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,10 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.setPublicPath('output');
+mix.options({
+    publicPath: 'output'
+});
 
 mix.js('resources/assets/app.js', 'output')
+	.vue()
     .version();
