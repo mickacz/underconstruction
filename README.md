@@ -17,7 +17,7 @@ This Laravel package makes it possible to set your website in "Under Constructio
 
 ## Installation
 
-Begin by installing this package through Composer (Laravel 6, 7, 8  and 9 compatible!).
+Begin by installing this package through Composer (Laravel 6, 7, 8,9 and 10 compatible!).
 
 ```bash
 composer require larsjanssen6/underconstruction
@@ -159,7 +159,7 @@ return [
 
 You'll have to set a 4 digit code (you can change this up to 6 in config file). You can do that by running this custom
 artisan command (in this example the code is ```1234``` ,you can obviously set another code). It
-will generate a hash that will be stored in your `.env` file. 
+will generate a hash that will be stored in your `.env` file.
 
 ```bash
 php artisan code:set 1234
@@ -191,7 +191,7 @@ I would love to hear your ideas to improve my codeing style and conventions. Fee
 
 ## Security
 
-If you discover any security related issues, please email larsjanssen64@gmail.com. You can also make an issue. 
+If you discover any security related issues, please email larsjanssen64@gmail.com. You can also make an issue.
 
 ## Credits
 
