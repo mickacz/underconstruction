@@ -17,7 +17,7 @@ This Laravel package makes it possible to set your website in "Under Constructio
 
 ## Installation
 
-Begin by installing this package through Composer (Laravel 6, 7, 8, 9, 10 and 11 compatible!).
+Begin by installing this package through Composer (Laravel 6, 7, 8, 9, 10, 11 and 12 compatible!).
 
 ```bash
 composer require larsjanssen6/underconstruction
